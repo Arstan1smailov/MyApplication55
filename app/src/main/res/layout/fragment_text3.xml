@@ -3,22 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TextFragment2">
+    tools:context=".TextFragment3">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:id="@+id/showText2"
+        android:id="@+id/showText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:layout_gravity="center" />
     <Button
-        android:id="@+id/buttonTextAccept2"
+        android:id="@+id/buttonTextAccept3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="420dp"
-        android:text="click2"
+        android:text="click3"
         android:textSize="22sp"
         />
 

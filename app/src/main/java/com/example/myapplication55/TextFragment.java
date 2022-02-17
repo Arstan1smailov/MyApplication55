@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class TextFragment extends Fragment {
     private TextView showText1;
-    private Button buttonTextAccept;
+    private Button buttonTextAccept1;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -26,17 +26,17 @@ public class TextFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         showText1 = view.findViewById(R.id.showText1);
-        buttonTextAccept = view.findViewById(R.id.buttonTextAccept1);
+        buttonTextAccept1 = view.findViewById(R.id.buttonTextAccept1);
         Bundle textAccept = getArguments();
-
-        String text = textAccept.getString("KEY1");
+        String text = textAccept.getString(MainFragment.KEY_FOR_TEXT);
         showText1.setText(text);
-        buttonTextAccept.setOnClickListener(new View.OnClickListener() {
+        buttonTextAccept1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                textAccept.putString(MainFragment.KEY_FOR_TEXT, text);
                 Fragment fragment = new TextFragment2();
                 fragment.setArguments(textAccept);
-                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new TextFragment2()).addToBackStack("").commit();
+                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).addToBackStack("").commit();
 
             }
         });

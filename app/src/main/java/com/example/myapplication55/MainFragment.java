@@ -39,7 +39,7 @@ public class MainFragment extends Fragment {
             public void onClick(View view) {
                 textForFragment.putString(KEY_FOR_TEXT, textToSend.getText().toString());
                 fragment.setArguments(textForFragment);
-                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new TextFragment()).addToBackStack("").commit();
+                requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).addToBackStack("").commit();
             }
         });
     }
